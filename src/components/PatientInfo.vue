@@ -6,7 +6,8 @@
         .col-sm
           b-input-group.mb-2(size='s', prepend='DOB')
             b-form-input(v-model='dob', type='date')
-            |{{age}} years
+        .col-sm
+          |{{age}} years
       .row
         .col-sm
           b-input-group.mb-2(size='s', prepend='Height', append='cm')
@@ -14,7 +15,6 @@
         .col-sm
           b-input-group.mb-2(size='s', prepend='Weight', append='kg', model='weight')
             b-form-input(v-model='weight', type='number')
-        .col-sm
       .row
         .col-sm
           b-button-group
@@ -46,10 +46,10 @@ import asa_grades from '../reference/asa_grades'
 export default {
   name: "PatientInfo",
 
-  data: function () {
-    return {      asa_grades: asa_grades,
-
-    }
+  data() {
+    return {
+      asa_grades,
+    };
   },
   computed: {
 
@@ -58,9 +58,7 @@ export default {
     weight: sync("patient/weight"),
     sex: sync("patient/sex"),
     bmi: get('patient/bmi'),
-    bmi_category: get('patient/bmi_category'),
     asa: sync('patient/asa'),
-    IBW: get('patient/IBW'),
     age: get('patient/age')
   },
 };
