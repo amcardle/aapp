@@ -8,11 +8,8 @@ html
         b-navbar-brand(to='/') MedTool
         b-collapse#nav_collapse(is-nav='')
           b-navbar-nav
-            b-nav-item(href='#', to='/bayes') Bayes
             b-nav-item(href='#', to='/quickmaths') Quick Maths
             b-nav-item(href='#', to='/opiatedoseconverter') Opiate Converter
-            b-nav-item(href='#', to='/search') Search
-            b-nav-item(href='#', to='/export') Export
             b-nav-item(href='#', to='/about') About
             b-nav-item-dropdown(text='Links', right='')
               b-dropdown-item(href='https://www.e-lfh.org.uk/e-learning-sessions/rcoa-novice/home.html') RCoA Novice Guides
@@ -67,60 +64,65 @@ html
 </template>
 
 <style lang="scss">
-@import "bootstrap/scss/bootstrap.scss";
+@import 'bootstrap/scss/bootstrap.scss';
 
 html {
-  position: relative;
-  min-height: 100%;
-  font-size: 0.85rem;
+    position: relative;
+    min-height: 100%;
+    font-size: 0.85rem;
 }
 
 body > .container {
-  padding: 0px 0px 0;
+    padding: 0px 0px 0;
 }
 
 .card-body {
-  padding-left: 2px;
-  padding-right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .table th {
-  padding: 0.3rem;
+    padding: 0.3rem;
 }
 
 .table td {
-  padding: 0.3rem;
+    padding: 0.3rem;
 }
 
 .drug {
-  @extend .row;
-  @extend .border-bottom;
+    @extend .row;
+    @extend .border-bottom;
 }
 </style>
 
 <script>
-
 export default {
-  name: "about",
+    name: 'About',
 
-  computed: {
-    github_link: function () {
-      return 'https://github.com/amcardle/medtool/tree/' + this.$store.getters.githash.slice(0, 5);
-    }
-  },
-
-  methods: {
-    reloadSW() {
-      localStorage.clear();
-      navigator.serviceWorker.getRegistration().then(function (reg) {
-        if (reg) {
-          reg.unregister().then(function () { window.location.reload(true); });
-        } else {
-          window.location.reload(true);
+    computed: {
+        github_link: function() {
+            return (
+                'https://github.com/amcardle/medtool/tree/' +
+                this.$store.getters.githash.slice(0, 5)
+            );
         }
-      });
-    }
-  }
+    },
 
+    methods: {
+        reloadSW() {
+            localStorage.clear();
+            navigator.serviceWorker
+                .getRegistration()
+                .then(function(reg) {
+                    if (reg) {
+                        reg.unregister().then(function() {
+                            window.location.reload(true);
+                        });
+                    } else {
+                        window.location.reload(true);
+                    }
+                });
+        }
+    }
 };
 </script>

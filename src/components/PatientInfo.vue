@@ -6,7 +6,8 @@
         .col-sm
           b-input-group.mb-2(size='s', prepend='DOB')
             b-form-input(v-model='dob', type='date')
-            |{{age}} years
+        .col-sm
+          |{{age}} years
       .row
         .col-sm
           b-input-group.mb-2(size='s', prepend='Height', append='cm')
@@ -14,7 +15,6 @@
         .col-sm
           b-input-group.mb-2(size='s', prepend='Weight', append='kg', model='weight')
             b-form-input(v-model='weight', type='number')
-        .col-sm
       .row
         .col-sm
           b-button-group
@@ -39,29 +39,25 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import { sync, get } from 'vuex-pathify';
-import asa_grades from '../reference/asa_grades'
+import asa_grades from '../reference/asa_grades';
 
 export default {
-  name: "PatientInfo",
+    name: 'PatientInfo',
 
-  data: function () {
-    return {      asa_grades: asa_grades,
-
+    data() {
+        return {
+            asa_grades
+        };
+    },
+    computed: {
+        dob: sync('patient/dob'),
+        height: sync('patient/height'),
+        weight: sync('patient/weight'),
+        sex: sync('patient/sex'),
+        bmi: get('patient/bmi'),
+        asa: sync('patient/asa'),
+        age: get('patient/age')
     }
-  },
-  computed: {
-
-    dob: sync('patient/dob'),
-    height: sync("patient/height"),
-    weight: sync("patient/weight"),
-    sex: sync("patient/sex"),
-    bmi: get('patient/bmi'),
-    bmi_category: get('patient/bmi_category'),
-    asa: sync('patient/asa'),
-    IBW: get('patient/IBW'),
-    age: get('patient/age')
-  },
 };
 </script>
