@@ -8,11 +8,8 @@ html
         b-navbar-brand(to='/') MedTool
         b-collapse#nav_collapse(is-nav='')
           b-navbar-nav
-            b-nav-item(href='#', to='/bayes') Bayes
             b-nav-item(href='#', to='/quickmaths') Quick Maths
             b-nav-item(href='#', to='/opiatedoseconverter') Opiate Converter
-            b-nav-item(href='#', to='/search') Search
-            b-nav-item(href='#', to='/export') Export
             b-nav-item(href='#', to='/about') About
             b-nav-item-dropdown(text='Links', right='')
               b-dropdown-item(href='https://www.e-lfh.org.uk/e-learning-sessions/rcoa-novice/home.html') RCoA Novice Guides
