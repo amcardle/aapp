@@ -170,7 +170,7 @@ export default [
     new Drug({
         name: "Neostigmine + Glycopyrronium",
         description: "Reversal for muscle relaxants - TBW",
-        dose: "Neostigmine 2.5 mg + Glycopyrronium 500 mcg",
+        dose: "Neostigmine 2.5 mg + Glycopyrronium 500 mcg", //TODO correct this
         presentation: " ",
     }),
     new Drug_Weight({

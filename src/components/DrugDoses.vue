@@ -7,6 +7,8 @@
       a(href='https://www.e-lfh.org.uk/e-learning-sessions/rcoa-novice/content/e_library/drugs/ANAESTHETIC_DRUG_CRIB_SHEET-8.pdf') source.
       | Morbidly Obese patients will need 
       a(href="https://doi.org/10.1016/j.bjae.2018.09.001") dose adjustments
+      b-alert(show variant="danger" v-if="age<18") Adult Doses Only
+      b-alert(show variant="danger" v-if="ASA>2") ASA 1-2 only
     .table-responsive
       table.table
         thead
@@ -44,6 +46,8 @@ export default {
   computed: {
     height: get("patient/height"),
     weight: get("patient/weight"),
+    age: get("patient/age"),
+    ASA: get("patient/asa")
   },
 };
 </script>
