@@ -1,13 +1,18 @@
 <template>
   <div class="home">
     <PatientInfo></PatientInfo>
-    <ReferenceValues></ReferenceValues>
-    <DrugDoses></DrugDoses>
-    <ul>
-      <li v-for="drug in Drugs" v-bind:key="drug.name">
+
+    <div>
+      <div class="row">
+        <div class="col-3">Name</div>
+        <div class="col-3">Class</div>
+        <div class="col-3">Dose</div>
+        <div class="col-3">Presentation</div>
+      </div>
+      <div v-for="drug in Drugs" v-bind:key="drug.name">
         <component :is="drug"></component>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </template>
 
