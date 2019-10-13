@@ -1,6 +1,17 @@
 <template>
   <div class="about">
-    <a href="https://github.com/amcardle/medtool">Source Code</a>
+    <h1>About</h1>
+    <a href="https://github.com/amcardle/aapp">Source Code</a>
+
+    <h1>Sources</h1>
+    <ul>
+      Drug Doses
+      <li>
+        <a
+          href="https://www.e-lfh.org.uk/e-learning-sessions/rcoa-novice/content/e_library/drugs/ANAESTHETIC_DRUG_CRIB_SHEET-8.pdf"
+        >RCOA basic anaesthetic drugs</a>
+      </li>
+    </ul>
 
     <h1>Disclaimer</h1>
 
