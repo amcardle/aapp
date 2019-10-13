@@ -1,10 +1,10 @@
 <template>
   <div>
-    Propofol
+    Thiopental
     <p />Role: Anaesthetic
-    <p />Dose: 2-3 mg / kg
+    <p />Dose: 3-5 mg / kg
     <p />
-    {{2*weight}} - {{3*weight}} mg
+    {{3*weight}} - {{5*weight}} mg
     <p />
   </div>
 </template>
@@ -14,7 +14,7 @@
 import { sync, get } from 'vuex-pathify';
 
 export default {
-  name: "Propofol",
+  name: "Thiopental",
   computed: {
     weight: get("patient/weight")
   },
