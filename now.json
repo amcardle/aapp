@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/static-build",
+            "config": {
+                "distDir": "dist"
+            }
+        }
+    ],
+    "alias": [
+        "medtool.now.sh"
+    ],
+    "github": {
+        "enabled": true
+    }
+}
