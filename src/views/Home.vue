@@ -8,8 +8,6 @@
 
 <script>
 import PatientInfo from "@/components/PatientInfo.vue";
-import ReferenceValues from "@/components/ReferenceValues.vue";
-import OpiateDoseConverter from "@/components/OpiateDoseConverter.vue"
 import Drugs from "@/components/Drugs.vue"
 
 export default {
