@@ -6,6 +6,7 @@
         .col-sm
           b-input-group.mb-2(size='s', prepend='DOB')
             b-form-input(v-model='dob', type='date')
+            |{{age}} years
       .row
         .col-sm
           b-input-group.mb-2(size='s', prepend='Height', append='cm')
@@ -59,7 +60,8 @@ export default {
     bmi: get('patient/bmi'),
     bmi_category: get('patient/bmi_category'),
     asa: sync('patient/asa'),
-    IBW: get('patient/IBW')
+    IBW: get('patient/IBW'),
+    age: get('patient/age')
   },
 };
 </script>
