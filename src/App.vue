@@ -91,6 +91,11 @@ body > .container {
 .table td {
   padding: 0.3rem;
 }
+
+.drug {
+  @extend .row;
+  @extend .border-bottom;
+}
 </style>
 
 <script>
