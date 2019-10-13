@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 import BootstrapVue from 'bootstrap-vue';
 import Toasted from 'vue-toasted';
-//import './registerServiceWorker'
+import './registerServiceWorker'
 
 
 Vue.use(BootstrapVue);

@@ -57,10 +57,10 @@
         |{{roundup(tramadol)}} mg
     .row
       .col
-        b-input-group.mb-2(size='s', prepend='Fentanyl', append="microg")
+        b-input-group.mb-2(size='s', prepend='Fentanyl', append="ug")
           b-form-input(v-on:input="sfentanyl")
       .col-4
-        | {{roundup(fentanyl)}} microg
+        | {{roundup(fentanyl)}} ug
 </template>
 
 <style lang="scss">
