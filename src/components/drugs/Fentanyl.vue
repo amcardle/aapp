@@ -12,8 +12,8 @@ export default {
       ///// ADJUST THE FOLLOWING PARAMETERS
       name: "Fentanyl",
       drug_class: "Opioid",
-      dose: "1 microg/kg",
-      presentation: "50 microg/ml",
+      dose: "1 ug/kg",
+      presentation: "50 ug/ml",
       color: "background-color:#71C5E8;"
     }
   },

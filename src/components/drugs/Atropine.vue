@@ -10,7 +10,7 @@ export default {
       ///// ADJUST THE FOLLOWING PARAMETERS
       name: "Atropine",
       drug_class: "Anticholinergic",
-      dose: "20 microg/kg",
+      dose: "20 ug/kg",
       presentation: "1 mg/ml",
       color: "background-color:#A4D65E;"
     }

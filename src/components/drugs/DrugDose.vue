@@ -10,8 +10,8 @@ export default {
       ///// ADJUST THE FOLLOWING PARAMETERS
       name: "DrugDose",
       drug_class: "DrugDose",
-      dose: "100000 microg/kg",
-      presentation: "5000000 microg/ml"
+      dose: "100000 ug/kg",
+      presentation: "5000000 ug/ml"
     }
   },
   computed: {

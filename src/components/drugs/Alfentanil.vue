@@ -10,8 +10,8 @@ export default {
       ///// ADJUST THE FOLLOWING PARAMETERS
       name: "Alfentanil",
       drug_class: "Opioid",
-      dose: "10 microg/kg",
-      presentation: "500 microg/ml",
+      dose: "10 ug/kg",
+      presentation: "500 ug/ml",
       color: "background-color:#71C5E8;"
     }
   },
