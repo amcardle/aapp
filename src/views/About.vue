@@ -1,21 +1,22 @@
 <template>
-  <div class="about">
-    <h1>About</h1>
-    <a href="https://github.com/amcardle/aapp">Source Code</a>
+    <div class="about">
+        <h1>About</h1>
+        <a href="https://github.com/amcardle/aapp">Source Code</a>
 
-    <h1>Sources</h1>
-    <ul>
-      Drug Doses
-      <li>
-        <a
-          href="https://www.e-lfh.org.uk/e-learning-sessions/rcoa-novice/content/e_library/drugs/ANAESTHETIC_DRUG_CRIB_SHEET-8.pdf"
-        >RCOA basic anaesthetic drugs</a>
-      </li>
-    </ul>
+        <h1>Sources</h1>
+        <ul>
+            Drug Doses
+            <li>
+                <a
+                    href="https://www.e-lfh.org.uk/e-learning-sessions/rcoa-novice/content/e_library/drugs/ANAESTHETIC_DRUG_CRIB_SHEET-8.pdf"
+                    >RCOA basic anaesthetic drugs</a
+                >
+            </li>
+        </ul>
 
-    <h1>Disclaimer</h1>
+        <h1>Disclaimer</h1>
 
-    <pre>
+        <pre>
     Medical information disclaimer
     1. Credit
     1.1 This document was created using a template from SEQ Legal (https://seqlegal.com).
@@ -43,10 +44,11 @@
     (b) limit or exclude any liability for fraud or fraudulent misrepresentation;
     (c) limit any liabilities in any way that is not permitted under applicable law; or
     (d) exclude any liabilities that may not be excluded under applicable law.
-    </pre>
+    </pre
+        >
 
-    <h1>License</h1>
-    <pre>
+        <h1>License</h1>
+        <pre>
                           GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -669,6 +671,7 @@ copy of the Program in return for a fee.
 
                      END OF TERMS AND CONDITIONS
 
-</pre>
-  </div>
+</pre
+        >
+    </div>
 </template>

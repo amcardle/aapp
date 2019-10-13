@@ -22,28 +22,41 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 import { sync, get } from 'vuex-pathify';
 import * as math from 'mathjs';
 import debounce from 'lodash/debounce';
 
-
 export default {
-  name: "Quick Maths",
+    name: 'Quick Maths',
 
-  data: function () {
-    return { input: "" }
-  },
-  computed: {
-    output: function () { return math.format(math.eval(this.input), 4) },
-    tex: function () { return "\\(" + math.parse(this.input).toTex() + " = " + math.parse(this.output).toTex() + "\\)" }
-  },
-  watch: {
-    input: debounce(function (e) {
-      this.$nextTick(function () {
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub, "editor-output"]);
-      })
-    }, 300)
-  }
+    data: function() {
+        return { input: '' };
+    },
+    computed: {
+        output: function() {
+            return math.format(math.eval(this.input), 4);
+        },
+        tex: function() {
+            return (
+                '\\(' +
+                math.parse(this.input).toTex() +
+                ' = ' +
+                math.parse(this.output).toTex() +
+                '\\)'
+            );
+        }
+    },
+    watch: {
+        input: debounce(function(e) {
+            this.$nextTick(function() {
+                MathJax.Hub.Queue([
+                    'Typeset',
+                    MathJax.Hub,
+                    'editor-output'
+                ]);
+            });
+        }, 300)
+    }
 };
 </script>

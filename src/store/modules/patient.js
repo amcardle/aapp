@@ -1,8 +1,8 @@
 import pathify from 'vuex-pathify';
 import { make, sync } from 'vuex-pathify';
-import * as math from 'mathjs'
+import * as math from 'mathjs';
 import axios from 'axios';
-import _ from 'lodash'
+import _ from 'lodash';
 
 var moment = require('moment');
 
@@ -11,14 +11,12 @@ const state = {
     height: 0,
     weight: 0,
     sex: 'm',
-    asa: 1,
-
+    asa: 1
 };
 
 const getters = {
-    ...make.getters(state),
+    ...make.getters(state)
 };
-
 
 const mutations = { ...make.mutations(state) };
 

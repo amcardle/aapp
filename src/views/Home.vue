@@ -1,20 +1,20 @@
 <template>
-  <div class="home">
-    <PatientInfo></PatientInfo>
+    <div class="home">
+        <PatientInfo></PatientInfo>
 
-    <Drugs></Drugs>
-  </div>
+        <Drugs></Drugs>
+    </div>
 </template>
 
 <script>
-import PatientInfo from "@/components/PatientInfo.vue";
-import Drugs from "@/components/Drugs.vue"
+import PatientInfo from '@/components/PatientInfo.vue';
+import Drugs from '@/components/Drugs.vue';
 
 export default {
-  name: "home",
-  components: {
-    PatientInfo,
-    Drugs
-  }
+    name: 'Home',
+    components: {
+        PatientInfo,
+        Drugs
+    }
 };
 </script>
