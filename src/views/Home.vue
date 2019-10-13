@@ -12,11 +12,6 @@ import Drugs from "@/components/Drugs.vue"
 
 export default {
   name: "home",
-  data: function () {
-    return {
-      Drugs: Drugs
-    }
-  },
   components: {
     PatientInfo,
     Drugs
