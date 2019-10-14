@@ -25,7 +25,7 @@ html
               b-dropdown-item(href='https://www.mdcalc.com/ariscat-score-postoperative-pulmonary-complications') ARISCAT Score
             b-nav-item-dropdown(text='QRH', right='')
               b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_1-1_Key_basic_plan_v1.pdf', target='_blank', title='1.1 Key basic plan') 1-1 Key basic plan
-              b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_2-1_Cardiac_arrest_Revised_v1.pdf', target='_blank', title='2.1 Cardiac Arrest Revised') 2-1 Cardiac Arrest 
+              b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_2-1_Cardiac_arrest_Revised_v1.pdf', target='_blank', title='2.1 Cardiac Arrest Revised') 2-1 Cardiac Arrest
               b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_2-2_Hypoxia-desaturation-cyanosis_v1.pdf', target='_blank', title='2.2 Hypoxia desaturation cyanosis') 2-2 Hypoxia desaturation cyanosis
               b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_2-3_Increased_airway_pressure_v1.pdf', target='_blank', title='2.3 Increased airway') 2-3 Increased Airway Pressure
               b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_2-4_Hypotension_v1.pdf', target='_blank', title='2.4 Hypotension') 2-4 Hypotension
@@ -51,12 +51,8 @@ html
               b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_4-2_Mains_electricity_failure_v1.pdf', target='_blank', title='4-2 Mains electricity failure') 4-2 Mains electricity failure
               b-dropdown-item(href='https://www.aagbi.org/sites/default/files/QRH_4-3_Emergency_evacuation_v1_0.pdf', target='_blank', title='4-3 Emergency evacuation') 4-3 Emergency evacuation
 
-
           b-nav-text.ml-auto
             b-button.btn.btn-secondary.btn-sm.btn-dark(v-on:click='reloadSW') Reset
-            small
-              a(v-bind:href='github_link') {{$store.getters.githash.slice(0,5)}}
-              |             - {{$store.getters.gitbranch}}
     main.container(role='main')
       div
         router-view
@@ -97,32 +93,26 @@ body > .container {
 
 <script>
 export default {
-    name: 'About',
+  name: 'About',
 
-    computed: {
-        github_link: function() {
-            return (
-                'https://github.com/amcardle/medtool/tree/' +
-                this.$store.getters.githash.slice(0, 5)
-            );
-        }
-    },
+  computed: {
+  },
 
-    methods: {
-        reloadSW() {
-            localStorage.clear();
-            navigator.serviceWorker
-                .getRegistration()
-                .then(function(reg) {
-                    if (reg) {
-                        reg.unregister().then(function() {
-                            window.location.reload(true);
-                        });
-                    } else {
-                        window.location.reload(true);
-                    }
-                });
-        }
+  methods: {
+    reloadSW () {
+      localStorage.clear()
+      navigator.serviceWorker
+        .getRegistration()
+        .then(function (reg) {
+          if (reg) {
+            reg.unregister().then(function () {
+              window.location.reload(true)
+            })
+          } else {
+            window.location.reload(true)
+          }
+        })
     }
-};
+  }
+}
 </script>

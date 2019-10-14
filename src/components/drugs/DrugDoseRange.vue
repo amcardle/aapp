@@ -1,24 +1,24 @@
 <script>
-import { sync, get } from 'vuex-pathify';
-import * as math from 'mathjs';
+import { sync, get } from 'vuex-pathify'
+import * as math from 'mathjs'
 
 export default {
-    name: 'DrugDoseRange',
-    data: function() {
-        return {
-            math: math,
-            ///// ADJUST THE FOLLOWING PARAMETERS
-            name: 'DrugDoseRange',
-            drug_class: 'Induction Agent',
-            lowest_dose: '2000 mg/kg',
-            highest_dose: '3000 mg/kg',
-            presentation: '10000 mg/ml'
-        };
-    },
-    computed: {
-        weight: get('patient/weight')
+  name: 'DrugDoseRange',
+  data: function () {
+    return {
+      math: math,
+      /// // ADJUST THE FOLLOWING PARAMETERS
+      name: 'DrugDoseRange',
+      drug_class: 'Induction Agent',
+      lowest_dose: '2000 mg/kg',
+      highest_dose: '3000 mg/kg',
+      presentation: '10000 mg/ml'
     }
-};
+  },
+  computed: {
+    weight: get('patient/weight')
+  }
+}
 </script>
 
 <template>

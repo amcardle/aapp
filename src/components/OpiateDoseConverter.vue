@@ -70,83 +70,83 @@
 </style>
 
 <script>
-import { get } from 'vuex-pathify';
+import { get } from 'vuex-pathify'
 
 export default {
-    name: 'OpiateDoseConverter',
+  name: 'OpiateDoseConverter',
 
-    data() {
-        return {
-            MED: '0 mg',
-            roundup(num) {
-                return +`${Math.round(`${num}e+2`)}e-2`;
-            }
-        };
-    },
-    computed: {
-        weight: get('patient/weight'),
-        codeine() {
-            return this.MED * 10;
-        },
-        dihydrocodeine() {
-            return this.MED * 10;
-        },
-        hydromorphone() {
-            return this.MED * 0.13;
-        },
-        oral_morphine() {
-            return this.MED * 1;
-        },
-        iv_morphine() {
-            return this.MED * 0.3333;
-        },
-        oral_oxycodone() {
-            return this.MED * 0.5;
-        },
-        iv_oxycodone() {
-            return this.MED * 0.3333;
-        },
-        tapentadol() {
-            return this.MED * 2.5;
-        },
-        tramadol() {
-            return this.MED * 6.7;
-        },
-        fentanyl() {
-            return this.MED * (200 / 30);
-        }
-    },
-    methods: {
-        scodeine(value) {
-            this.MED = value / 10;
-        },
-        sdihydrocodeine(value) {
-            this.MED = value / 10;
-        },
-        shydromorphone(value) {
-            this.MED = value / 0.13;
-        },
-        soral_morphine(value) {
-            this.MED = value / 1;
-        },
-        siv_morphine(value) {
-            this.MED = value / 0.3333;
-        },
-        soral_oxycodone(value) {
-            this.MED = value / 0.5;
-        },
-        siv_oxycodone(value) {
-            this.MED = value / 0.3333;
-        },
-        stapentadol(value) {
-            this.MED = value / 2.5;
-        },
-        stramadol(value) {
-            this.MED = value / 6.7;
-        },
-        sfentanyl(value) {
-            this.MED = value / (200 / 30);
-        }
+  data () {
+    return {
+      MED: '0 mg',
+      roundup (num) {
+        return +`${Math.round(`${num}e+2`)}e-2`
+      }
     }
-};
+  },
+  computed: {
+    weight: get('patient/weight'),
+    codeine () {
+      return this.MED * 10
+    },
+    dihydrocodeine () {
+      return this.MED * 10
+    },
+    hydromorphone () {
+      return this.MED * 0.13
+    },
+    oral_morphine () {
+      return this.MED * 1
+    },
+    iv_morphine () {
+      return this.MED * 0.3333
+    },
+    oral_oxycodone () {
+      return this.MED * 0.5
+    },
+    iv_oxycodone () {
+      return this.MED * 0.3333
+    },
+    tapentadol () {
+      return this.MED * 2.5
+    },
+    tramadol () {
+      return this.MED * 6.7
+    },
+    fentanyl () {
+      return this.MED * (200 / 30)
+    }
+  },
+  methods: {
+    scodeine (value) {
+      this.MED = value / 10
+    },
+    sdihydrocodeine (value) {
+      this.MED = value / 10
+    },
+    shydromorphone (value) {
+      this.MED = value / 0.13
+    },
+    soral_morphine (value) {
+      this.MED = value / 1
+    },
+    siv_morphine (value) {
+      this.MED = value / 0.3333
+    },
+    soral_oxycodone (value) {
+      this.MED = value / 0.5
+    },
+    siv_oxycodone (value) {
+      this.MED = value / 0.3333
+    },
+    stapentadol (value) {
+      this.MED = value / 2.5
+    },
+    stramadol (value) {
+      this.MED = value / 6.7
+    },
+    sfentanyl (value) {
+      this.MED = value / (200 / 30)
+    }
+  }
+}
 </script>

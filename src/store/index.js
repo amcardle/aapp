@@ -1,36 +1,38 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import createPersistedState from 'vuex-persistedstate';
-import pathify from 'vuex-pathify';
-import { make } from 'vuex-pathify';
-import patient from './modules/patient';
+/* eslint-disable camelcase */
+import Vue from 'vue'
+import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
+import pathify, { make } from 'vuex-pathify'
 
-Vue.use(Vuex);
+import patient_module from './modules/patient.js'
 
-const state = {};
+Vue.use(Vuex)
 
-const mutations = make.mutations(state);
+const state = {}
+
+const mutations = make.mutations(state)
 
 export default new Vuex.Store({
-    modules: {
-        patient
+  modules: {
+    patient: patient_module
+  },
+  getters: {
+    githash: () => {
+      // return GITVERSION;
+      return 'undefined'
     },
-    getters: {
-        githash: () => {
-            return GITVERSION;
-            //return "undefined"
-        },
-        gitbranch: () => {
-            return GITBRANCH;
-        }
-    },
-    state,
-    mutations: {
-        ...mutations,
-        loadState(state, new_state) {
-            this.replaceState(new_state);
-        }
-    },
-    actions: {},
-    plugins: [createPersistedState(), pathify.plugin]
-});
+    gitbranch: () => {
+      // return GITBRANCH
+      return 'undefined'
+    }
+  },
+  state,
+  mutations: {
+    ...mutations,
+    loadState (state, new_state) {
+      this.replaceState(new_state)
+    }
+  },
+  actions: {},
+  plugins: [createPersistedState(), pathify.plugin]
+})
