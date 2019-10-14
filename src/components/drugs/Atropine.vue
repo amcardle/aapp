@@ -10,7 +10,7 @@ export default {
             name: 'Atropine',
             drug_class: 'Anticholinergic',
             dose: '20 ug/kg',
-            presentation: '1 mg/ml',
+            presentation: '600 ug/ml',
             color: 'background-color:#A4D65E;'
         };
     }
