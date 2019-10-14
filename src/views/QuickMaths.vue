@@ -1,24 +1,14 @@
-<template lang="pug">
-.home
-  b-card.border-light(title='Quick Maths')
-    .row
-      .col-sm
-        b-form-input(v-model='input')
-      .col-sm-2
-        big {{output}}
-      #editor-output.col-sm-4(v-html='tex')
-        big {{output}}
-    br
-    | % w/v = grams in 100 millilitres
-    br
-    | % w/w = grams in 100 grams
-    br
-    | % v/v = millilitres in 100 millilitres.
-    br
-    | 1:1000 = gram in 1000 millilitres
-    br
-    | required volume = required dose / concentration of drug
-
+<template>
+<div class="home">
+    <b-card class="border-light" title="Quick Maths">
+        <div class="row">
+            <div class="col-sm">
+                <b-form-input v-model="input"></b-form-input>
+            </div>
+            <div class="col-sm-2"><big>{{output}}</big></div>
+            <div class="col-sm-4" id="editor-output" v-html="tex"><big>{{output}}</big></div>
+        </div><br/>% w/v = grams in 100 millilitres<br/>% w/w = grams in 100 grams<br/>% v/v = millilitres in 100 millilitres.<br/>1:1000 = gram in 1000 millilitres<br/>required volume = required dose / concentration of drug</b-card>
+</div>
 </template>
 
 <script>
