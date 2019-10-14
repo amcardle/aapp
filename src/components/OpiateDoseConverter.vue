@@ -1,66 +1,88 @@
-<template lang="pug">
-.home
-  b-card(title='Opiate Dose Converter')
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Morphine Oral', append="mg")
-          b-form-input(v-on:input="soral_morphine")
-      .col-4
-        |{{roundup(oral_morphine)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Morphine IV', append="mg")
-          b-form-input(v-on:input="siv_morphine")
-      .col-4
-        |{{roundup(iv_morphine)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Codeine', append="mg")
-          b-form-input(v-on:input="scodeine")
-      .col-4
-        |{{roundup(codeine)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Dihydrocodeine', append="mg")
-          b-form-input(v-on:input="sdihydrocodeine")
-      .col-4
-        |{{roundup(dihydrocodeine)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Hydromorphone', append="mg")
-          b-form-input(v-on:input="shydromorphone")
-      .col-4
-        |{{roundup(hydromorphone)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Oxycodone Oral', append="mg")
-          b-form-input(v-on:input="soral_oxycodone")
-      .col-4
-        |{{roundup(oral_oxycodone)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Oxycodone IV', append="mg")
-          b-form-input(v-on:input="siv_oxycodone")
-      .col-4
-        |{{roundup(iv_oxycodone)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Tapentadol', append="mg")
-          b-form-input(v-on:input="stapentadol")
-      .col-4
-        |{{roundup(tapentadol)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Tramadol', append="mg")
-          b-form-input(v-on:input="stramadol")
-      .col-4
-        |{{roundup(tramadol)}} mg
-    .row
-      .col
-        b-input-group.mb-2(size='s', prepend='Fentanyl', append="ug")
-          b-form-input(v-on:input="sfentanyl")
-      .col-4
-        | {{roundup(fentanyl)}} ug
+<template>
+<div class="home">
+    <b-card title="Opiate Dose Converter">
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Morphine Oral" append="mg">
+                    <b-form-input v-on:input="soral_morphine"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(oral_morphine)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Morphine IV" append="mg">
+                    <b-form-input v-on:input="siv_morphine"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(iv_morphine)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Codeine" append="mg">
+                    <b-form-input v-on:input="scodeine"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(codeine)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Dihydrocodeine" append="mg">
+                    <b-form-input v-on:input="sdihydrocodeine"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(dihydrocodeine)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Hydromorphone" append="mg">
+                    <b-form-input v-on:input="shydromorphone"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(hydromorphone)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Oxycodone Oral" append="mg">
+                    <b-form-input v-on:input="soral_oxycodone"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(oral_oxycodone)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Oxycodone IV" append="mg">
+                    <b-form-input v-on:input="siv_oxycodone"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(iv_oxycodone)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Tapentadol" append="mg">
+                    <b-form-input v-on:input="stapentadol"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(tapentadol)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Tramadol" append="mg">
+                    <b-form-input v-on:input="stramadol"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(tramadol)}} mg</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b-input-group class="mb-2" size="s" prepend="Fentanyl" append="ug">
+                    <b-form-input v-on:input="sfentanyl"></b-form-input>
+                </b-input-group>
+            </div>
+            <div class="col-4">{{roundup(fentanyl)}} ug</div>
+        </div>
+    </b-card>
+</div>
 </template>
 
 <style lang="scss">
