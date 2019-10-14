@@ -1,6 +1,6 @@
 {
-  "name": "AAPP",
-  "short_name": "AAPP",
+  "name": "aapp",
+  "short_name": "aapp",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
