@@ -1,18 +1,18 @@
 <script>
-import DrugDose from './DrugDose.vue';
+import DrugDose from './DrugDose.vue'
 
 export default {
-  name: "Atropine",
+  name: 'Atropine',
   mixins: [DrugDose],
-    data: function() {
-        return {
-            ///// ADJUST THE FOLLOWING PARAMETERS
-            name: 'Atropine',
-            drug_class: 'Anticholinergic',
-            dose: '20 ug/kg',
-            presentation: '1 mg/ml',
-            color: 'background-color:#A4D65E;'
-        };
+  data: function () {
+    return {
+      /// // ADJUST THE FOLLOWING PARAMETERS
+      name: 'Atropine',
+      drug_class: 'Anticholinergic',
+      dose: '20 ug/kg',
+      presentation: '600 ug/ml',
+      color: 'background-color:#A4D65E;'
     }
-};
+  }
+}
 </script>

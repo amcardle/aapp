@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import Drugs from '@/components/drugs/AllDrugs.js';
+import Drugs from '@/components/drugs/AllDrugs.js'
 
 export default {
-    name: 'Drugs',
-    data: function() {
-        return {
-            Drugs: Drugs
-        };
+  name: 'Drugs',
+  data: function () {
+    return {
+      Drugs: Drugs
     }
-};
+  }
+}
 </script>

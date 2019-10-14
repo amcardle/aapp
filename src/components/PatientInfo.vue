@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 <template lang="pug">
 .home
   b-card(title='Patient Details')
@@ -39,25 +40,25 @@
 </template>
 
 <script>
-import { sync, get } from 'vuex-pathify';
-import asa_grades from '../reference/asa_grades';
+import { sync, get } from 'vuex-pathify'
+import asa_grades from '../reference/asa_grades'
 
 export default {
-    name: 'PatientInfo',
+  name: 'PatientInfo',
 
-    data() {
-        return {
-            asa_grades
-        };
-    },
-    computed: {
-        dob: sync('patient/dob'),
-        height: sync('patient/height'),
-        weight: sync('patient/weight'),
-        sex: sync('patient/sex'),
-        bmi: get('patient/bmi'),
-        asa: sync('patient/asa'),
-        age: get('patient/age')
+  data () {
+    return {
+      asa_grades
     }
-};
+  },
+  computed: {
+    dob: sync('patient/dob'),
+    height: sync('patient/height'),
+    weight: sync('patient/weight'),
+    sex: sync('patient/sex'),
+    bmi: get('patient/bmi'),
+    asa: sync('patient/asa'),
+    age: get('patient/age')
+  }
+}
 </script>

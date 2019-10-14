@@ -1,23 +1,23 @@
 <script>
-import { sync, get } from 'vuex-pathify';
-import * as math from 'mathjs';
+import { sync, get } from 'vuex-pathify'
+import * as math from 'mathjs'
 
 export default {
-    name: 'DrugDose',
-    data: function() {
-        return {
-            math: math,
-            ///// ADJUST THE FOLLOWING PARAMETERS
-            name: 'DrugDose',
-            drug_class: 'DrugDose',
-            dose: '100000 ug/kg',
-            presentation: '5000000 ug/ml'
-        };
-    },
-    computed: {
-        weight: get('patient/weight')
+  name: 'DrugDose',
+  data: function () {
+    return {
+      math: math,
+      /// // ADJUST THE FOLLOWING PARAMETERS
+      name: 'DrugDose',
+      drug_class: 'DrugDose',
+      dose: '100000 ug/kg',
+      presentation: '5000000 ug/ml'
     }
-};
+    },
+  computed: {
+    weight: get('patient/weight')
+  }
+}
 </script>
 
 <template>
