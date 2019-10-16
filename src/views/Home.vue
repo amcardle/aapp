@@ -1,10 +1,10 @@
 <template>
     <div class="home">
         <PatientInfo></PatientInfo>
-
+        <Reference></Reference>
         <Drugs></Drugs>
         <MACs></MACs>
-        <Reference></Reference>
+
     </div>
 </template>
 
