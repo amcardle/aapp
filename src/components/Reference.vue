@@ -2,39 +2,47 @@
     <!-- DRUG LIST -->
     <b-card title="Reference">
         <div class="container">
-
+          <ul>
+          <li>Weight</li>
+          <ul>
           <!-- https://www.mdcalc.com/ideal-body-weight-adjusted-body-weight#evidence -->
-            <div class="row" v-show="sex=='m' && age > 16">
+            <li v-show="sex=='m' && age > 16">
               Ideal Body Weight (Devine) : <MathEval :expression="`50 kg + (2.3 kg * ((${height}/2.54) - 60))`"></MathEval>
-            </div>
-            <div class="row" v-show="sex=='f' && age > 16">
+            </li>
+            <li  v-show="sex=='f' && age > 16">
               Ideal Body Weight (Devine) : <MathEval :expression="`45.5 kg + (2.3 kg * ((${height}/2.54) - 60 ))`"></MathEval>
-            </div>
-
-            <div class="row" v-show="sex=='m' && age > 16">
+            </li>
+            <li  v-show="sex=='m' && age > 16">
               Adjusted Body Weight (Devine) : <MathEval :expression="`(50 kg + (2.3 kg * ((${height}/2.54) - 60))) + 0.4 * (${weight} kg - (50 kg + (2.3 kg * ((${height}/2.54) - 60))))`"></MathEval>
-            </div>
-            <div class="row" v-show="sex=='f' && age > 16">
+            </li>
+            <li v-show="sex=='f' && age > 16">
               Adjusted Body Weight (Devine) : <MathEval :expression="`(45.5 kg + (2.3 kg * ((${height}/2.54) - 60))) + 0.4 * (${weight} kg - (45.5 kg + (2.3 kg * ((${height}/2.54) - 60))))`"></MathEval>
-            </div>
+            </li>
+            </ul>
 
-            <div class="row" v-show="age > 20">
+            <li>Airway</li>
+            <ul>
+            <li  v-show="age > 20">
               ETT Tube Length (Chula) : <MathEval :expression="`0.1 cm * ${height} + 4 cm`"></MathEval>
-            </div>
-
-            <div class="row" v-show="age > 20">
-              Tidal Volume : <MathEval :expression="`${ideal_body_weight} * 6 ml/kg`"></MathEval> - <MathEval :expression="`${ideal_body_weight} * 8 ml/kg`"></MathEval>
-            </div>
+            </li>
 
             <!--- https://www.mdcalc.com/pediatric-endotracheal-tube-ett-size#evidence --->
-            <div class="row" v-show="age<12">
+            <li  v-show="age<12">
             Paediatric Uncuffed Tube Size : <MathEval :expression="`(${age} / 4) + 4`"></MathEval> mm
-            </div>
+            </li>
 
-            <div class="row" v-show="age<12">
+            <li  v-show="age<12">
             Paediatric Cuffed Tube Size : <MathEval :expression="`(${age} / 4) + 3`"></MathEval> mm
-            </div>
+            </li>
+            </ul>
 
+            <li>Ventilation</li>
+            <ul>
+            <li  v-show="age > 20">
+              Tidal Volume : <MathEval :expression="`${ideal_body_weight} * 6 ml/kg`"></MathEval> - <MathEval :expression="`${ideal_body_weight} * 8 ml/kg`"></MathEval>
+            </li>
+            </ul>
+</ul>
         </div>
     </b-card>
 </template>
