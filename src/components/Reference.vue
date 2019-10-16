@@ -2,14 +2,22 @@
     <!-- DRUG LIST -->
     <b-card title="Reference">
         <div class="container">
-            <div class="row">
+
+          <!-- https://www.mdcalc.com/ideal-body-weight-adjusted-body-weight#evidence -->
+            <div class="row" v-show="sex=='m'">
+              Ideal Body Weight (Devine) - <MathEval :expression="`50 kg + (2.3 kg * ((${height}/2.54) - 60))`"></MathEval>
             </div>
+            <div class="row" v-show="sex=='f'">
+              Ideal Body Weight (Devine) - <MathEval :expression="`45.5 kg + (2.3 kg * ((${height}/2.54) - 60 ))`"></MathEval>
+            </div>
+
         </div>
     </b-card>
 </template>
 
 <script>
 import { get } from 'vuex-pathify'
+import MathEval from '@/components/MathEval.vue'
 
 export default {
   name: 'PatientInfo',
@@ -18,6 +26,7 @@ export default {
     return {
     }
   },
+  components: { MathEval },
   computed: {
     dob: get('patient/dob'),
     height: get('patient/height'),

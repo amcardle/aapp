@@ -4,7 +4,7 @@
 
         <Drugs></Drugs>
         <MACs></MACs>
-        <MathEval expression="1+1"></MathEval>
+        <Reference></Reference>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
 import PatientInfo from '@/components/PatientInfo.vue'
 import Drugs from '@/components/Drugs.vue'
 import MACs from '@/components/MACs.vue'
-import MathEval from '@/components/MathEval.vue'
+import Reference from '@/components/Reference.vue'
 
 export default {
   name: 'Home',
@@ -20,7 +20,7 @@ export default {
     PatientInfo,
     Drugs,
     MACs,
-    MathEval
+    Reference
   }
 }
 </script>
