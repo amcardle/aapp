@@ -73,11 +73,10 @@
 
 <style lang="scss">
 @import 'bootstrap/scss/bootstrap.scss';
-
 html {
     position: relative;
     min-height: 100%;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
 }
 
 body > .container {
@@ -101,6 +100,12 @@ body > .container {
     @extend .row;
     @extend .border-bottom;
 }
+
+.drug > .col-3{
+    padding-right: 0;
+    padding-left: 0;
+}
+
 </style>
 
 <script>
