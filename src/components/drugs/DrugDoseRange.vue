@@ -1,6 +1,7 @@
 <script>
 import { sync, get } from 'vuex-pathify'
 import * as math from 'mathjs'
+import MathEval from '@/components/MathEval.vue'
 
 export default {
   name: 'DrugDoseRange',
@@ -17,7 +18,8 @@ export default {
   },
   computed: {
     weight: get('patient/weight')
-  }
+  },
+  components: { MathEval }
 }
 </script>
 
@@ -29,43 +31,17 @@ export default {
 
         <div class="col-3">
             <div>
-                {{
-                    math.format(
-                        math.eval(`${lowest_dose} * ${weight} kg`),
-                        4
-                    )
-                }}
+                <MathEval :expression="`${lowest_dose} * ${weight} kg`"></MathEval>
                 -
-                {{
-                    math.format(
-                        math.eval(`${highest_dose} * ${weight} kg`),
-                        4
-                    )
-                }}
+                <MathEval :expression="`${highest_dose} * ${weight} kg`"></MathEval>
             </div>
-            <small class="text-muted"
-                >{{ lowest_dose }} - {{ highest_dose }}</small
-            >
+            <small class="text-muted">{{ lowest_dose }} - {{ highest_dose }}</small>
         </div>
         <div class="col-3">
             <div>
-                {{
-                    math.format(
-                        math.eval(
-                            `(${lowest_dose} * ${weight} kg)/(${presentation})`
-                        ),
-                        4
-                    )
-                }}
+                <MathEval :expression="`(${lowest_dose} * ${weight} kg)/(${presentation})`"></MathEval>
                 -
-                {{
-                    math.format(
-                        math.eval(
-                            `${highest_dose} * ${weight} kg/(${presentation})`
-                        ),
-                        4
-                    )
-                }}
+                <MathEval :expression="`${highest_dose} * ${weight} kg/(${presentation})`"></MathEval>
             </div>
             <small class="text-muted">{{ presentation }}</small>
         </div>

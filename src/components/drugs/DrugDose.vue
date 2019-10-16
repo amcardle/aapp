@@ -1,6 +1,7 @@
 <script>
-import { sync, get } from 'vuex-pathify'
+import { get } from 'vuex-pathify'
 import * as math from 'mathjs'
+import MathEval from '@/components/MathEval.vue'
 
 export default {
   name: 'DrugDose',
@@ -13,10 +14,11 @@ export default {
       dose: '100000 ug/kg',
       presentation: '5000000 ug/ml'
     }
-    },
+  },
   computed: {
     weight: get('patient/weight')
-  }
+  },
+  components: { MathEval }
 }
 </script>
 
@@ -28,25 +30,13 @@ export default {
 
         <div class="col-3">
             <div>
-                {{
-                    math.format(
-                        math.eval(`${dose} * ${weight} kg`),
-                        4
-                    )
-                }}
+                <MathEval :expression="`${dose} * ${weight} kg`"></MathEval>
             </div>
             <small class="text-muted">{{ dose }}</small>
         </div>
         <div class="col-3">
             <div>
-                {{
-                    math.format(
-                        math.eval(
-                            `(${dose} * ${weight} kg)/(${presentation})`
-                        ),
-                        4
-                    )
-                }}
+                <MathEval :expression="`(${dose} * ${weight} kg)/(${presentation})`"></MathEval>
             </div>
             <small class="text-muted">{{ presentation }}</small>
         </div>
