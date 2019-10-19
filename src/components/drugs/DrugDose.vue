@@ -12,7 +12,8 @@ export default {
       name: 'DrugDose',
       drug_class: 'DrugDose',
       dose: '100000 ug/kg',
-      presentation: '5000000 ug/ml'
+      presentation: '5000000 ug/ml',
+      tags: []
     }
   },
   computed: {

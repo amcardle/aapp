@@ -13,7 +13,8 @@ export default {
       drug_class: 'Induction Agent',
       lowest_dose: '2000 mg/kg',
       highest_dose: '3000 mg/kg',
-      presentation: '10000 mg/ml'
+      presentation: '10000 mg/ml',
+      tags: []
     }
   },
   computed: {
