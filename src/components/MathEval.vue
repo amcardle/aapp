@@ -1,11 +1,13 @@
 <script>
-import * as math from 'mathjs'
+
+import { eval as matheval, format as mathformat } from 'mathjs'
 
 export default {
   name: 'MathEval',
   data: function () {
     return {
-      math: math
+      mathformat: mathformat,
+      matheval: matheval
     }
   },
   props: ['expression', 'sf'] // TODO implement sf significant figures prop
@@ -15,6 +17,6 @@ export default {
 
 <template>
     <span class="MathEval" v-bind:title="expression">
-        {{math.format(math.eval(expression), 4)}}
+        {{mathformat(matheval(expression), 4)}}
     </span>
 </template>
