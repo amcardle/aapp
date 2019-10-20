@@ -9,6 +9,20 @@
         About
       </a>
     </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        href="https://github.com/amcardle/aapp/blob/master/LICENSE">
+        License
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        href="https://raw.githubusercontent.com/amcardle/aapp/master/DISCLAIMER">
+        Disclaimer
+      </a>
+    </li>
 
   </ul>
 </nav>
