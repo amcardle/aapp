@@ -1,48 +1,26 @@
 <script>
   import "./mystyles.scss";
   import { weight, height } from "./stores.js";
-  import Propofol from "./drugs/Propofol.svelte";
-  import Thiopental from "./drugs/Thiopental.svelte";
-  import Adrenaline from "./drugs/Adrenaline.svelte";
-  import Alfentanil from "./drugs/Alfentanil.svelte";
-  import Atracurium from "./drugs/Atracurium.svelte";
-  import Atropine from "./drugs/Atropine.svelte";
-  import Bupivacaine from "./drugs/Bupivacaine.svelte";
-  import Ephedrine from "./drugs/Ephedrine.svelte";
-  import Fentanyl from "./drugs/Fentanyl.svelte";
-  import Glycopyrronium from "./drugs/Glycopyrronium.svelte";
-  import Lidocaine from "./drugs/Lidocaine.svelte";
-  import Metaraminol from "./drugs/Metaraminol.svelte";
-  import Morphine from "./drugs/Morphine.svelte";
-  import Rocuronium from "./drugs/Rocuronium.svelte";
-  import Suxamethonium from "./drugs/Suxamethonium.svelte";
-  import Vecuronium from "./drugs/Vecuronium.svelte";
+  import DrugDoses from "./DrugDoses.svelte";
+  import NavBar from "./NavBar.svelte";
 </script>
 
-{$weight} kg
-<input on:input={event => weight.setKg(event.target.value)} />
-<br />
-{$height} cm
-<input on:input={event => height.setCm(event.target.value)} />
+<style>
+  .entire {
+    padding-top: 5rem;
+  }
+</style>
 
-<Propofol />
-<Thiopental />
+<NavBar />
 
-<Atracurium />
-<Rocuronium />
-<Suxamethonium />
-<Vecuronium />
+<main role="main" class="container entire">
+  {$weight} kg
+  <input on:input={event => weight.setKg(event.target.value)} />
+  <br />
+  {$height} cm
+  <input on:input={event => height.setCm(event.target.value)} />
 
-<Adrenaline />
-<Ephedrine />
-<Metaraminol />
+  <DrugDoses />
 
-<Alfentanil />
-<Fentanyl />
-<Morphine />
-
-<Atropine />
-<Glycopyrronium />
-
-<Lidocaine />
-<Bupivacaine />
+</main>
+<!-- /.container -->
