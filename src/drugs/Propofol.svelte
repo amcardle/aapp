@@ -7,11 +7,11 @@
   <span slot="drugName">Propofol</span>
 
   <span slot="drugDose">
-    {(2 * $weight).toPrecision(3)}-{(3 * $weight).toPrecision(3)} mg (2-3 mg/kg)
+    {(2 * $weight).toFixed(1)}-{(3 * $weight).toFixed(1)} mg (2-3 mg/kg)
   </span>
 
   <span slot="drugPresentation">
-    {((2 * $weight) / 10).toPrecision(3)} - {((3 * $weight) / 10).toPrecision(3)}
-    ml (10 mg/ml)
+    {((2 * $weight) / 10).toFixed(1)} - {((3 * $weight) / 10).toFixed(1)} ml (10
+    mg/ml)
   </span>
 </DrugComponent>

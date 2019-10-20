@@ -6,9 +6,9 @@
 <DrugComponent drugClass="paralytic">
   <span slot="drugName">Atracurium</span>
 
-  <span slot="drugDose">{(0.5 * $weight).toPrecision(3)} mg (0.5 mg/kg)</span>
+  <span slot="drugDose">{(0.5 * $weight).toFixed(1)} mg (0.5 mg/kg)</span>
 
   <span slot="drugPresentation">
-    {((0.5 * $weight) / 10).toPrecision(3)} ml (10 mg/ml)
+    {((0.5 * $weight) / 10).toFixed(1)} ml (10 mg/ml)
   </span>
 </DrugComponent>

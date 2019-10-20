@@ -2,7 +2,7 @@
   import { age } from "./stores.js";
 
   const MAC_calculator = function(age, MAC1, MAC) {
-    return (MAC1 * Math.pow(10, -0.00269 * (age - 40)) * MAC).toPrecision(3);
+    return (MAC1 * Math.pow(10, -0.00269 * (age - 40)) * MAC).toFixed(2);
   };
 
   const MAC_values = [0.6, 0.8, 1, 1.2, 1.4];
