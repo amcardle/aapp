@@ -20,4 +20,6 @@ function createHeight() {
     };
 }
 
+export const age = writable(40);
+
 export const height = createHeight();

@@ -1,8 +1,9 @@
 <script>
   import "./mystyles.scss";
-  import { weight, height } from "./stores.js";
+  import { weight, height, age } from "./stores.js";
   import DrugDoses from "./DrugDoses.svelte";
   import NavBar from "./NavBar.svelte";
+  import MACs from "./MACs.svelte";
 </script>
 
 <style>
@@ -19,8 +20,11 @@
   <br />
   {$height} cm
   <input on:input={event => height.setCm(event.target.value)} />
+  <br />
+  {$age}
+  <input bind:value={$age} />
 
   <DrugDoses />
+  <MACs />
 
 </main>
-<!-- /.container -->
