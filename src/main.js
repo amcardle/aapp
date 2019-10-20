@@ -1,20 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store/index.js'
-import BootstrapVue from 'bootstrap-vue'
-import Toasted from 'vue-toasted'
-import './registerServiceWorker'
+import App from './App.svelte';
 
-Vue.use(BootstrapVue)
-Vue.use(Toasted)
+const app = new App({
+	target: document.body,
+	props: {
+		name: 'world'
+	}
+});
 
-Vue.config.productionTip = false
-
-Vue.config.performance = true;
-
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+export default app;
