@@ -6,9 +6,11 @@
   .drug {
     border-bottom: 1px solid rgba(86, 61, 124, 0.2);
   }
-  .col {
+  .drug_col {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   /* Colored labels for different drug classes */
@@ -42,10 +44,10 @@
         <slot name="drugName" />
       </strong>
     </div>
-    <div class="col">
+    <div class="col drug_col">
       <slot name="drugDose" />
     </div>
-    <div class="col">
+    <div class="col drug_col">
       <slot name="drugPresentation" />
     </div>
   </div>
