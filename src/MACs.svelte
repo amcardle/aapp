@@ -15,8 +15,14 @@
   .col {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 </style>
+
+<!-- Source
+Br J Anaesth. 2003 Aug;91(2):170-4.
+Age-related iso-MAC charts for isoflurane, sevoflurane and desflurane in man. -->
 
 <div>
   <div class="container">
@@ -50,6 +56,14 @@
       </div>
       {#each MAC_values as MAC}
         <div class="col">{MAC_calculator($age, 104, MAC)}%</div>
+      {/each}
+    </div>
+    <div class="row drug">
+      <div class="col">
+        <strong>Desflurane</strong>
+      </div>
+      {#each MAC_values as MAC}
+        <div class="col">{MAC_calculator($age, 6.6, MAC)}%</div>
       {/each}
     </div>
   </div>
