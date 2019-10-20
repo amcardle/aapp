@@ -3,6 +3,9 @@
   import { weight, height } from "./stores.js";
   import Propofol from "./drugs/Propofol.svelte";
   import Thiopental from "./drugs/Thiopental.svelte";
+  import Adrenaline from "./drugs/Adrenaline.svelte";
+  import Alfentanil from "./drugs/Alfentanil.svelte";
+  import Atracurium from "./drugs/Atracurium.svelte";
 </script>
 
 {$weight} kg
@@ -13,3 +16,6 @@
 
 <Propofol />
 <Thiopental />
+<Adrenaline />
+<Alfentanil />
+<Atracurium />

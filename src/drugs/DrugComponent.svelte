@@ -29,7 +29,7 @@
   }
   .local {
     background-color: #b0a9a0;
-
+  }
 </style>
 
 <div class="container drug">
