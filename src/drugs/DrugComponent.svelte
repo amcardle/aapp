@@ -1,3 +1,9 @@
+<style>
+  .container {
+    color: red;
+  }
+</style>
+
 <div class="container">
   Name:
   <slot name="drugName" />

@@ -17,15 +17,6 @@ export default {
         file: "public/bundle.js"
     },
     plugins: [
-        svelte({
-            // enable run-time checks when not in production
-            dev: !production,
-            // we'll extract any component CSS out into
-            // a separate file — better for performance
-            css: css => {
-                css.write("public/bundle.css");
-            }
-        }),
         postcss({ extract: true, inject: false, minimize: true }),
 
         // If you have external dependencies installed from
@@ -37,6 +28,15 @@ export default {
             browser: true,
             dedupe: importee =>
                 importee === "svelte" || importee.startsWith("svelte/")
+        }),
+        svelte({
+            // enable run-time checks when not in production
+            dev: !production,
+            // we'll extract any component CSS out into
+            // a separate file — better for performance
+            css: css => {
+                css.write("public/component.css");
+            }
         }),
         commonjs(),
 
