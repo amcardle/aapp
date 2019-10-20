@@ -4,11 +4,11 @@
 </script>
 
 <DrugComponent drugClass="induction">
-  <span slot="drugName">Propofol</span>
+  <span slot="drugName">Thiopental</span>
 
-  <span slot="drugDose">{2 * $weight}-{3 * $weight} mg (2-3 mg/kg)</span>
+  <span slot="drugDose">{3 * $weight}-{5 * $weight} mg (3-5 mg/kg)</span>
 
   <span slot="drugPresentation">
-    {(2 * $weight) / 10} - {(3 * $weight) / 10} ml (10 mg/ml)
+    {(3 * $weight) / 25} - {(5 * $weight) / 25} ml (25 mg/ml)
   </span>
 </DrugComponent>
