@@ -1,4 +1,7 @@
 <script>
   import "./mystyles.scss";
-  export let name;
+  import { count } from "./stores.js";
 </script>
+
+{$count}
+<button class="button is-primary" on:click={() => $count++}>increment</button>
