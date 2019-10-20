@@ -1,11 +1,14 @@
 <script>
-	export let name;
+  import "./mystyle.scss";
+  export let name;
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+
 </style>
 
-<h1>Hello {name}!</h1>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Hello {name}</h1>
+  </div>
+</section>
