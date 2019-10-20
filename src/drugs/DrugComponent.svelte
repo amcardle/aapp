@@ -1,6 +1,7 @@
-<style>
-  .container {
-    color: red;
+<style lang="scss">
+  $color: green;
+  div {
+    color: $color;
   }
 </style>
 
