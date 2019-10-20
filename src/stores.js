@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
 
 function createWeight() {
-    const { subscribe, set, update } = writable(0);
+    const { subscribe, set, update } = writable(70);
 
     return {
         subscribe,
@@ -12,7 +12,7 @@ function createWeight() {
 export const weight = createWeight();
 
 function createHeight() {
-    const { subscribe, set, update } = writable(0);
+    const { subscribe, set, update } = writable(180);
 
     return {
         subscribe,
