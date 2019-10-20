@@ -1,7 +1,10 @@
 <script>
   import "./mystyles.scss";
-  import { count } from "./stores.js";
+  import { weight, height } from "./stores.js";
 </script>
 
-{$count}
-<button class="button is-primary" on:click={() => $count++}>increment</button>
+{$weight} kg
+<input on:input={event => weight.setKg(event.target.value)} />
+<br />
+{$height} cm
+<input on:input={event => height.setCm(event.target.value)} />
