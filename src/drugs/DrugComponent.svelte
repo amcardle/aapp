@@ -3,10 +3,15 @@
 </script>
 
 <style>
-  .container {
-    border-bottom-width: 2px;
-    border-color: black;
+  .drug {
+    border-bottom: 1px solid rgba(86, 61, 124, 0.2);
   }
+  .col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Colored labels for different drug classes */
   .other {
     background-color: white;
   }
@@ -24,20 +29,20 @@
   }
   .local {
     background-color: #b0a9a0;
-  }
+
 </style>
 
-<div class="container">
-  <div class={'columns is-desktop ' + drugClass}>
-    <div class="column has-text-centered">
+<div class="container drug">
+  <div class={'row ' + drugClass}>
+    <div class="col">
       <strong>
         <slot name="drugName" />
       </strong>
     </div>
-    <div class="column has-text-centered">
+    <div class="col">
       <slot name="drugDose" />
     </div>
-    <div class="column has-text-centered">
+    <div class="col">
       <slot name="drugPresentation" />
     </div>
   </div>
