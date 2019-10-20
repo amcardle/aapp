@@ -15,14 +15,38 @@
 <NavBar />
 
 <main role="main" class="container entire">
-  {$weight} kg
-  <input on:input={event => weight.setKg(event.target.value)} />
-  <br />
-  {$height} cm
-  <input on:input={event => height.setCm(event.target.value)} />
-  <br />
-  {$age}
-  <input bind:value={$age} />
+
+  <form>
+    <div class="form-group">
+      <label for="ageInput">Age</label>
+      <input
+        type="number"
+        class="form-control"
+        id="ageInput"
+        bind:value={$age}
+        placeholder="Age" />
+    </div>
+
+    <div class="form-group">
+      <label for="heightInput">Height (cm)</label>
+      <input
+        type="number"
+        class="form-control"
+        id="heightInput"
+        on:input={event => height.setCm(event.target.value)}
+        placeholder="Height" />
+    </div>
+
+    <div class="form-group">
+      <label for="weightInput">Weight (kg)</label>
+      <input
+        type="number"
+        class="form-control"
+        id="weightInput"
+        on:input={event => weight.setKg(event.target.value)}
+        placeholder="Weight" />
+    </div>
+  </form>
 
   <DrugDoses />
   <MACs />
