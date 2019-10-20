@@ -26,7 +26,7 @@ export default {
                 css.write("public/bundle.css");
             }
         }),
-        postcss({ extract: true, inject: false }),
+        postcss({ extract: true, inject: false, minimize: true }),
 
         // If you have external dependencies installed from
         // npm, you'll most likely need these plugins. In
