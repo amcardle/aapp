@@ -30,6 +30,9 @@
   .local {
     background-color: #b0a9a0;
   }
+  .anticholinergic {
+    background-color: #a4d65e;
+  }
 </style>
 
 <div class="container drug">
