@@ -5,6 +5,7 @@
   import NavBar from "./NavBar.svelte";
   import MACs from "./MACs.svelte";
   import Calc from "./Calc.svelte";
+  import Reference from "./Reference.svelte";
 </script>
 
 <NavBar />
@@ -44,6 +45,8 @@
     </div>
   </form>
 
+  <h1>Reference</h1>
+  <Reference />
   <h1>Drug Doses</h1>
   <DrugDoses />
   <h1>MACs</h1>

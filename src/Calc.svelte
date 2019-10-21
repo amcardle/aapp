@@ -2,4 +2,4 @@
   export let x;
 </script>
 
-{x()} {x.toString()}
+{x()}
