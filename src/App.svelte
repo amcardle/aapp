@@ -4,18 +4,14 @@
   import DrugDoses from "./DrugDoses.svelte";
   import NavBar from "./NavBar.svelte";
   import MACs from "./MACs.svelte";
+  import Calc from "./Calc.svelte";
 </script>
-
-<style>
-  .entire {
-    
-  }
-</style>
 
 <NavBar />
 
 <main role="main" class="container entire">
 
+  <h1>Patient information</h1>
   <form>
     <div class="form-group">
       <label for="ageInput">Age</label>
@@ -48,7 +44,8 @@
     </div>
   </form>
 
+  <h1>Drug Doses</h1>
   <DrugDoses />
+  <h1>MACs</h1>
   <MACs />
-
 </main>
