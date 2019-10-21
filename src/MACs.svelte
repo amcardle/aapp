@@ -12,12 +12,6 @@
   .drug {
     border-bottom: 1px solid rgba(86, 61, 124, 0.2);
   }
-  .col {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
 </style>
 
 <!-- Source

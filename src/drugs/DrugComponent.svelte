@@ -6,12 +6,6 @@
   .drug {
     border-bottom: 1px solid rgba(86, 61, 124, 0.2);
   }
-  .drug_col {
-    padding-top: 0.4 rem;
-    padding-bottom: 0.4 rem;
-    padding-right: 0;
-    padding-left: 0;
-  }
 
   /* Colored labels for different drug classes */
   .other {
