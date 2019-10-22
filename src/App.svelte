@@ -11,7 +11,7 @@
 <NavBar />
 
 <main role="main" class="container entire">
-
+<!--are comments preserved?-->
   <h1>Patient information</h1>
   <form>
     <div class="form-group">
