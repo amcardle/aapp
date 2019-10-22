@@ -4,6 +4,6 @@ A growing collection of useful tools for the anaesthetist, currently a work in p
 
 ## Stack
 
-Licensed under the GPL
-Written using Svelte js
-Hosted on now.sh
+- Licensed under the GPL
+- Written using Svelte js
+- Hosted on now.sh
