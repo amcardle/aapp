@@ -38,7 +38,8 @@ export default {
             css: css => {
                 css.write("public/component.css");
             },
-            preprocess: autoPreprocess({})
+            preprocess: autoPreprocess({}),
+            preserveComments: true
         }),
         commonjs(),
 
