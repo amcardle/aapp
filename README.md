@@ -1,4 +1,4 @@
-# Anaesthetics App (AAPP)
+# Anaesthetics APP (AAPP)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/amcardle/aapp.svg)](https://greenkeeper.io/)
 
