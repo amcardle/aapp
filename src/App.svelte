@@ -6,12 +6,13 @@
   import MACs from "./MACs.svelte";
   import Calc from "./Calc.svelte";
   import Reference from "./Reference.svelte";
+  import DocumentationGenerator from "./DocumentationGenerator.svelte";
 </script>
 
 <NavBar />
 
 <main role="main" class="container entire">
-<!--are comments preserved?-->
+  <!--are comments preserved?-->
   <h1>Patient information</h1>
   <form>
     <div class="form-group">
@@ -51,4 +52,6 @@
   <DrugDoses />
   <h1>MACs</h1>
   <MACs />
+  <h1>Documentation</h1>
+  <DocumentationGenerator />
 </main>
