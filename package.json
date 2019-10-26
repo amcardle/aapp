@@ -20,7 +20,8 @@
     "popper.js": "^1.16.0",
     "rollup-plugin-postcss": "^2.0.3",
     "showdown": "^1.9.0",
-    "sirv-cli": "^0.4.4"
+    "sirv-cli": "^0.4.4",
+    "mem": ">=4.0.0"
   },
   "scripts": {
     "build": "rollup -c",
