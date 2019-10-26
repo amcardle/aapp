@@ -1,77 +1,90 @@
 <script>
-  let hide_input = false;
-  let general_anaesthetic = false;
-  let local_anaesthetic = false;
+  let GA = false;
+  let GA_ETT = false;
+  let GA_SAD = false;
+  let GA_RSI = false;
 
-  let GA_risks = [
-    { ticked: true, text: "Nausea and Vomiting" },
-    { ticked: false, text: "Dental Damage" },
-    { ticked: false, text: "Awareness" },
-    { ticked: false, text: "Anaphylaxis" },
-    { ticked: false, text: "Death" }
-  ];
+  let RA1 = false;
+
+  let RA2 = false;
 </script>
 
 <style>
-
+  h3 {
+    color: #6c757d !important;
+  }
 </style>
 
-<div class="container">
-  <label>
-    <input type="checkbox" bind:checked={hide_input} />
-    Hide input
-  </label>
-  <div class="row">
-    <div class="col" hidden={hide_input}>
-      <h1>Documentation</h1>
-    </div>
+<div class="row">
 
-    <div class="col">
-      <h1>Documentation</h1>
-    </div>
+  <div class="col">
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" bind:checked={GA} />
+          General Anaesthetic
+        </label>
+      </li>
+      <ul>
+        {#if GA}
+          <li>
+            <label>
+              <input type="checkbox" bind:checked={GA_ETT} />
+              ETT
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" bind:checked={GA_SAD} />
+              SAD
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" bind:checked={GA_RSI} />
+              RSI
+            </label>
+          </li>
+        {/if}
+      </ul>
+      <li>
+        <label>
+          <input type="checkbox" bind:checked={RA1} />
+          Regional Anaesthetic 1
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" bind:checked={RA2} />
+          Regional Anaesthetic 2
+        </label>
+      </li>
+    </ul>
   </div>
-
-  <div class="row">
-    <div class="col" hidden={hide_input}>
-      <h2>
-        <input type="checkbox" bind:checked={general_anaesthetic} />
-        General Anaesthetic
-      </h2>
-      <div hidden={!general_anaesthetic}>
-
-        <h3>Consented to the following risks</h3>
-        <ul>
-          {#each GA_risks as risk}
-            <li>
-              <label>
-                <input type="checkbox" bind:checked={risk.ticked} />
-                {risk.text}
-              </label>
-            </li>
-          {/each}
-        </ul>
+  <div class="col">
+    <!-- GENERAL ANAESTHETIC -->
+    <div hidden={!GA}>
+      <h2>General Anaesthetic</h2>
+      <div hidden={!GA_ETT}>
+        <h3>Endotracheal Intubation</h3>
+      </div>
+      <div hidden={!GA_RSI}>
+        <h3>Rapid Sequence Induction</h3>
+      </div>
+      <div hidden={!GA_SAD}>
+        <h3>Supraglottic Airway Device</h3>
       </div>
     </div>
 
-    <div class="col" hidden={!general_anaesthetic}>
-      <h2>General Anaesthetic</h2>
-
-      <h3>Consented to the following risks</h3>
-      <ul>
-        {#each GA_risks as risk}
-          {#if risk.ticked}
-            <li>{risk.text}</li>
-          {/if}
-        {/each}
-      </ul>
-
+    <!-- Regional Anaesthesia 1-->
+    <div hidden={!RA1}>
+      <h2>Regional Anaesthetic</h2>
     </div>
+
+    <!-- Regional Anaesthesia 2-->
+    <div hidden={!RA2}>
+      <h2>Regional Anaesthetic</h2>
+    </div>
+
   </div>
-
-  <div class="row">
-    <div class="col" hidden={hide_input}>...</div>
-
-    <div class="col">...</div>
-  </div>
-
 </div>
