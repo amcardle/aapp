@@ -67,6 +67,9 @@
         <label>
           <input type="checkbox" bind:checked={spinal} />
           Spinal
+          <a href="https://www.rcoa.ac.uk/system/files/03-YourSpinalweb.pdf">
+            PIL
+          </a>
         </label>
       </li>
       <li>
@@ -108,9 +111,40 @@
     <!-- Spinal Anaesthesia-->
     <div hidden={!spinal}>
       <h2>Spinal Anaesthetic</h2>
+      <h3>Consent</h3>
+      <!-- Source: https://www.rcoa.ac.uk/system/files/03-YourSpinalweb.pdf-->
+      <ul>
+        <li>
+          Common (1:10 to 1:100)
+          <ul>
+            <li>Low blood pressure</li>
+            <li>Nausea and Vomiting</li>
+            <li>Itching</li>
+            <li>Urinary retention and urinary catheterisation</li>
+            <li>Pain during injection</li>
+            <li>Headache</li>
+            <li>Significant post-dural puncture headache (1:200)</li>
+          </ul>
+        </li>
+        <li>
+          Rare (1:10,000)
+          <ul>
+            <li>
+              Nerve Damage causing loss of sensation and weakness, normally
+              lasting days to weeks
+            </li>
+          </ul>
+        </li>
+        <li>
+          Very Rare (1:50,000)
+          <ul>
+            <li>Permanent Nerve Damage</li>
+          </ul>
+        </li>
+      </ul>
     </div>
 
-    <!-- Spinal Anaesthesia-->
+    <!-- Epidural Anaesthesia-->
     <div hidden={!epidural}>
       <h2>Epidural Anaesthetic</h2>
     </div>
