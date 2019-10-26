@@ -11,7 +11,7 @@
 <NavBar />
 
 <main role="main" class="container entire">
-<!--are comments preserved?-->
+  <!--are comments preserved?-->
   <h1>Patient information</h1>
   <form>
     <div class="form-group">
@@ -51,4 +51,5 @@
   <DrugDoses />
   <h1>MACs</h1>
   <MACs />
+
 </main>
