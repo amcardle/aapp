@@ -1,4 +1,3 @@
-<a
-  href="https://github.com/amcardle/aapp/blob/documentation_generator/public/documentation.md">
+<a href="https://github.com/amcardle/aapp/blob/master/public/documentation.md">
   Documentation
 </a>
