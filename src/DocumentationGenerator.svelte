@@ -7,6 +7,10 @@
   let RA1 = false;
 
   let RA2 = false;
+
+  let spinal = false;
+
+  let epidural = false;
 </script>
 
 <style>
@@ -59,6 +63,18 @@
           Regional Anaesthetic 2
         </label>
       </li>
+      <li>
+        <label>
+          <input type="checkbox" bind:checked={spinal} />
+          Spinal
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" bind:checked={epidural} />
+          Epidural
+        </label>
+      </li>
     </ul>
   </div>
   <div class="col">
@@ -84,6 +100,16 @@
     <!-- Regional Anaesthesia 2-->
     <div hidden={!RA2}>
       <h2>Regional Anaesthetic</h2>
+    </div>
+
+    <!-- Spinal Anaesthesia-->
+    <div hidden={!spinal}>
+      <h2>Spinal Anaesthetic</h2>
+    </div>
+
+    <!-- Spinal Anaesthesia-->
+    <div hidden={!epidural}>
+      <h2>Epidural Anaesthetic</h2>
     </div>
 
   </div>
