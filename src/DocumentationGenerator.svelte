@@ -80,13 +80,10 @@
       </li>
     </ul>
   </div>
-  <div class="col">
+  <div class="col" contenteditable="true">
     <!-- GENERAL ANAESTHETIC -->
     <div hidden={!GA}>
       <h2>General Anaesthetic</h2>
-      <span contenteditable="true" class="border border-secondary">
-        editable
-      </span>
       <div hidden={!GA_ETT}>
         <h3>Endotracheal Intubation</h3>
       </div>
