@@ -16,8 +16,8 @@
 
 <ul>
   <h2>Weight</h2>
-  <li>Ideal Body Weight (Devine) - {$ideal_body_weight}</li>
-  <li>Adjusted Body Weight - {$adjusted_body_weight}</li>
+  <li>Ideal Body Weight (Devine) - {Math.round($ideal_body_weight)} kg</li>
+  <li>Adjusted Body Weight - {Math.round($adjusted_body_weight)} kg</li>
 
   {#if $age < 18}
     <h2>Paediatric</h2>

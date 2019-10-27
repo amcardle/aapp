@@ -1,6 +1,6 @@
 <script>
   import "./mystyles.scss";
-  import { weight, height, age } from "./stores.js";
+  import { weight, height, age, sex } from "./stores.js";
   import DrugDoses from "./DrugDoses.svelte";
   import NavBar from "./NavBar.svelte";
   import MACs from "./MACs.svelte";
@@ -44,6 +44,28 @@
         id="weightInput"
         on:input={event => weight.setKg(event.target.value)}
         placeholder="Weight" />
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input
+        bind:group={$sex}
+        value={'m'}
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1" />
+      <label class="form-check-label" for="inlineRadio1">Male</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input
+        bind:group={$sex}
+        value={'f'}
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2" />
+      <label class="form-check-label" for="inlineRadio2">Female</label>
     </div>
   </form>
 
