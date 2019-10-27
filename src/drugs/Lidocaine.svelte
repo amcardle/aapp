@@ -9,7 +9,7 @@
   <span slot="drugDose">{(3 * $lean_body_weight).toFixed(1)} mg (3 mg/kg)</span>
 
   <span slot="drugPresentation">
-    {(3 * $lean_body_weight).toFixed(1) / 10} ml (10 mg/ml)
+    {((3 * $lean_body_weight) / 10).toFixed(1)} ml (10 mg/ml)
   </span>
 </DrugComponent>
 
@@ -19,6 +19,6 @@
   <span slot="drugDose">{(6 * $lean_body_weight).toFixed(1)} mg (6 mg/kg)</span>
 
   <span slot="drugPresentation">
-    {(6 * $lean_body_weight).toFixed(1) / 10} ml (10 mg/ml)
+    {((6 * $lean_body_weight) / 10).toFixed(1)} ml (10 mg/ml)
   </span>
 </DrugComponent>
