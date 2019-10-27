@@ -35,9 +35,10 @@ export const ideal_body_weight = derived([sex, height], ([$sex, $height]) => {
 });
 
 export const lean_body_weight = derived([sex, height, weight, BMI], ([$sex, $height, $weight, $BMI]) => {
+    //Using formula in (Anesthesiology 2017; 126:1019-32)
     if ($sex == "m") {
-        return 1.1 * $weight - 0.0128 * $BMI * $weight;
+        return (9.27 * 10 * 10 * 10 * $weight) / (6.68 * 10 * 10 * 10 + 216 * $BMI);
     } else {
-        return 1.07 * $weight - 0.0148 * $BMI * $weight;
+        return (9.27 * 10 * 10 * 10 * $weight) / (8.78 * 10 * 10 * 10 + 244 * $BMI);
     }
 });
