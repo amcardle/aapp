@@ -37,5 +37,7 @@ export const ideal_body_weight = derived([sex, height], ([$sex, $height]) => {
 export const lean_body_weight = derived([sex, height, weight, BMI], ([$sex, $height, $weight, $BMI]) => {
     if ($sex == "m") {
         return 1.1 * $weight - 0.0128 * $BMI * $weight;
+    } else {
+        return 1.07 * $weight - 0.0148 * $BMI * $weight;
     }
 });
