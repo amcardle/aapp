@@ -6,7 +6,7 @@
     age,
     sex,
     ideal_body_weight,
-    adjusted_body_weight
+    lean_body_weight
   } from "./stores.js";
   import DrugDoses from "./DrugDoses.svelte";
   import NavBar from "./NavBar.svelte";
@@ -16,8 +16,8 @@
 
 <ul>
   <h2>Weight</h2>
-  <li>Ideal Body Weight (Devine) - {Math.round($ideal_body_weight)} kg</li>
-  <li>Adjusted Body Weight - {Math.round($adjusted_body_weight)} kg</li>
+  <li>Ideal Body Weight - {Math.round($ideal_body_weight)} kg</li>
+  <li>Lean Body Weight - {Math.round($lean_body_weight)} kg</li>
   <li>BMI - {Math.round(($weight * 10000) / ($height * $height))}</li>
 
   {#if $age < 18}
