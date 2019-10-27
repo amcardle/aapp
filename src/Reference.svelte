@@ -34,8 +34,22 @@
     <li>Adrenaline {10 * $weight} microg - {0.1 * $weight} ml</li>
     <li>Glucose: {2 * $weight} ml 10% Dextrose</li>
 
-    <!-- Source: ALPS Handbook 6th edition-->
+    <h3>Airway</h3>
+    <li>ETT internal diameter: {Math.round($age / 4) + 4} mm uncuffed</li>
+    <li>ETT length (oral) - {Math.abs($age / 2 + 12, 1)} cm</li>
+    <li>ETT length (nasal) - {Math.abs($age / 2 + 15, 1)} cm</li>
+    {#if $weight < 6.5}
+      <li>LMA #1 - 4 ml cuff</li>
+    {:else if $weight < 20}
+      <li>LMA #2 - 10 ml cuff</li>
+    {:else if $weight < 30}
+      <li>LMA #3 - 14 ml cuff</li>
+    {:else}
+      <li>LMA #3 - 20 ml cuff</li>
+    {/if}
+
     <h3>Haemodynamics</h3>
+    <!-- Source: ALPS Handbook 6th edition-->
     {#if $age < 1 / 12}
       <li>Birth</li>
       <li>Guide Weight: 3.5 kg</li>
