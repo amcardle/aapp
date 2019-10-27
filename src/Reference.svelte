@@ -20,7 +20,8 @@
   <li>Adjusted Body Weight - {Math.round($adjusted_body_weight)} kg</li>
 
   {#if $age < 18}
-    <h2>WETFLAGS</h2>
+    <h2>Paediatric</h2>
+    <h3>WETFLAGS</h3>
 
     <li>
       Weight: {($age + 4) * 2} kg -
@@ -32,8 +33,8 @@
     <li>Adrenaline {10 * $weight} microg - {0.1 * $weight} ml</li>
     <li>Glucose: {2 * $weight} ml 10% Dextrose</li>
 
-    <h2>Paediatric</h2>
     <!-- Source: ALPS Handbook 6th edition-->
+    <h3>Haemodynamics</h3>
     {#if $age < 1 / 12}
       <li>Birth</li>
       <li>Guide Weight: 3.5 kg</li>
