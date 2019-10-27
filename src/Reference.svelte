@@ -18,6 +18,7 @@
   <h2>Weight</h2>
   <li>Ideal Body Weight (Devine) - {Math.round($ideal_body_weight)} kg</li>
   <li>Adjusted Body Weight - {Math.round($adjusted_body_weight)} kg</li>
+  <li>BMI - {Math.round(($weight * 10000) / ($height * $height))}</li>
 
   {#if $age < 18}
     <h2>Paediatric</h2>
