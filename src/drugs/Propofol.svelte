@@ -1,17 +1,18 @@
 <script>
   import DrugComponent from "./DrugComponent.svelte";
-  import { weight, height } from "../stores";
+  import { weight, height, lean_body_weight } from "../stores";
 </script>
 
 <DrugComponent drugClass="induction">
   <span slot="drugName">Propofol</span>
 
   <span slot="drugDose">
-    {(2 * $weight).toFixed(1)}-{(3 * $weight).toFixed(1)} mg (2-3 mg/kg)
+    {(2 * $lean_body_weight).toFixed(1)}-{(3 * $lean_body_weight).toFixed(1)} mg
+    (2-3 mg/kg)
   </span>
 
   <span slot="drugPresentation">
-    {((2 * $weight) / 10).toFixed(1)} - {((3 * $weight) / 10).toFixed(1)} ml (10
-    mg/ml)
+    {((2 * $lean_body_weight) / 10).toFixed(1)} - {((3 * $lean_body_weight) / 10).toFixed(1)}
+    ml (10 mg/ml)
   </span>
 </DrugComponent>
