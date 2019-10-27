@@ -20,6 +20,18 @@
   <li>Adjusted Body Weight - {Math.round($adjusted_body_weight)} kg</li>
 
   {#if $age < 18}
+    <h2>WETFLAGS</h2>
+
+    <li>
+      Weight: {($age + 4) * 2} kg -
+      <a href="#" on:click={() => weight.setKg(($age + 4) * 2)}>Set</a>
+    </li>
+    <li>Energy: {4 * $weight} Joules</li>
+    <li>Tube: {Math.round($age / 4) + 4} mm uncuffed</li>
+    <li>Fluid Bolus: {20 * $weight} ml isotonic fluid</li>
+    <li>Adrenaline {10 * $weight} microg - {0.1 * $weight} ml</li>
+    <li>Glucose: {2 * $weight} ml 10% Dextrose</li>
+
     <h2>Paediatric</h2>
     <!-- Source: ALPS Handbook 6th edition-->
     {#if $age < 1 / 12}

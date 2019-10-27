@@ -16,7 +16,7 @@
   <h1>Patient information</h1>
   <form>
     <div class="form-group">
-      <label for="ageInput">Age</label>
+      <label for="ageInput">Age - {$age}</label>
       <input
         type="number"
         step="0.1"
@@ -27,7 +27,7 @@
     </div>
 
     <div class="form-group">
-      <label for="heightInput">Height (cm)</label>
+      <label for="heightInput">Height (cm) - {$height}</label>
       <input
         type="number"
         class="form-control"
@@ -37,7 +37,7 @@
     </div>
 
     <div class="form-group">
-      <label for="weightInput">Weight (kg)</label>
+      <label for="weightInput">Weight (kg) - {$weight}</label>
       <input
         type="number"
         class="form-control"
