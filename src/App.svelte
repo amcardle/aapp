@@ -19,6 +19,7 @@
       <label for="ageInput">Age</label>
       <input
         type="number"
+        step="0.1"
         class="form-control"
         id="ageInput"
         bind:value={$age}
