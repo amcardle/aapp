@@ -20,6 +20,8 @@ Age-related iso-MAC charts for isoflurane, sevoflurane and desflurane in man. --
 
 <div>
   <div class="container">
+    ALERT: There is some disagreement in the literature regarding isoMAC values,
+    use with caution
     <div class="row drug">
       <div class="col py-sm-2 py-1 py-1 px-sm-2 px-0">
         <strong>Age adjusted MAC</strong>
