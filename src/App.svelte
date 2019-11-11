@@ -74,7 +74,7 @@
   <h1>Drug Doses</h1>
   <DrugDoses />
   <h1>MACs</h1>
-  <MACs />
+
   <DocumentationGenerator />
 
 </main>
