@@ -30,6 +30,16 @@ Age-related iso-MAC charts for isoflurane, sevoflurane and desflurane in man. --
     </div>
     <div class="row drug">
       <div class="col py-sm-2 py-1 py-1 px-sm-2 px-0">
+        <strong>Adjustment Factor</strong>
+      </div>
+      {#each MAC_values as MAC}
+        <div class="col py-sm-2 py-1 py-1 px-sm-2 px-0">
+          {MAC_calculator($age, 1.0, MAC)}%
+        </div>
+      {/each}
+    </div>
+    <div class="row drug">
+      <div class="col py-sm-2 py-1 py-1 px-sm-2 px-0">
         <strong>Sevoflurane</strong>
       </div>
       {#each MAC_values as MAC}
